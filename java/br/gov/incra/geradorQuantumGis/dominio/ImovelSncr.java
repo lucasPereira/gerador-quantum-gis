@@ -2,14 +2,14 @@ package br.gov.incra.geradorQuantumGis.dominio;
 
 public class ImovelSncr {
 	
-	// 00 CNPJ/CPF						(documento do proprietário)				(123.456.789-01 ou 12.345.678/9012-34)
-	// 01 NOME DA EMPRESA OU PESSOA		(nome do proprietário)					(-)
-	// 02 DÍVIDA PGFN					(dívida do proprietário na receita)		(decimal com separador)
-	// 03 CÓDIGO INCRA					(código SNCR do imóvel)					(123.456.789.012-3)
-	// 04 NOME DO IMÓVEL				(nome do imóvel)						(-)
-	// 05 ÁREA (ha)						(área do imóvel)						(decimal com separador)
-	// 06 MUNICÍPIO						(cidade do imóvel)						(-)
-	// 07 UF							(estado do imóvel)						(-)
+	// 00 CNPJ/CPF						(documento proprietário)	(123.456.789-01 ou 12.345.678/9012-34)
+	// 01 NOME DA EMPRESA OU PESSOA		(nome proprietário)			(-)
+	// 02 DÍVIDA PGFN					(dívida proprietário)		(decimal com separador)
+	// 03 CÓDIGO INCRA					(código SNCR imóvel)		(123.456.789.012-3)
+	// 04 NOME DO IMÓVEL				(nome imóvel)				(-)
+	// 05 ÁREA (ha)						(área imóvel)				(decimal com separador)
+	// 06 MUNICÍPIO						(cidade imóvel)				(-)
+	// 07 UF							(estado imóvel)				(-)
 
 	private String documento;
 	private String nomeDoProprietario;
