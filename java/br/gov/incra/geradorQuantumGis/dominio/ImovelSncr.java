@@ -2,86 +2,86 @@ package br.gov.incra.geradorQuantumGis.dominio;
 
 public class ImovelSncr {
 	
-	// 00 CNPJ/CPF						(documento proprietário)	(123.456.789-01 ou 12.345.678/9012-34)
-	// 01 NOME DA EMPRESA OU PESSOA		(nome proprietário)			(-)
-	// 02 DÍVIDA PGFN					(dívida proprietário)		(decimal com separador)
-	// 03 CÓDIGO INCRA					(código SNCR imóvel)		(123.456.789.012-3)
-	// 04 NOME DO IMÓVEL				(nome imóvel)				(-)
-	// 05 ÁREA (ha)						(área imóvel)				(decimal com separador)
-	// 06 MUNICÍPIO						(cidade imóvel)				(-)
-	// 07 UF							(estado imóvel)				(-)
+	// 00		CNPJ/CPF						(documento proprietário)	(123.456.789-01 ou 12.345.678/9012-34)
+	// 01		NOME DA EMPRESA OU PESSOA		(nome proprietário)			(-)
+	// 02		DÍVIDA PGFN						(dívida proprietário)		(decimal com separador)
+	// 03		CÓDIGO INCRA					(código SNCR imóvel)		(123.456.789.012-3)
+	// 04		NOME DO IMÓVEL					(nome imóvel)				(-)
+	// 05		ÁREA (ha)						(área imóvel)				(decimal com separador)
+	// 06		MUNICÍPIO						(cidade imóvel)				(-)
+	// 07		UF								(estado imóvel)				(-)
 
-	private String documento;
-	private String nomeDoProprietario;
-	private String divida;
-	private String codigoSncr;
-	private String nome;
-	private String area;
-	private String cidade;
-	private String estado;
+	private String documentoProprietario;
+	private String nomeProprietario;
+	private String dividaProprietario;
+	private String codigoSncrImovel;
+	private String nomeImovel;
+	private String areaImovel;
+	private String cidadeImovel;
+	private String estadoImovel;
 
-	public String getDocumento() {
-		return documento;
+	public String getDocumentoProprietario() {
+		return documentoProprietario;
 	}
 
-	public void setDocumento(String documento) {
-		this.documento = documento;
+	public void setDocumentoProprietario(String documentoProprietario) {
+		this.documentoProprietario = documentoProprietario;
 	}
 
-	public String getNomeDoProprietario() {
-		return nomeDoProprietario;
+	public String getNomeProprietario() {
+		return nomeProprietario;
 	}
 
-	public void setNomeDoProprietario(String nomeDoProprietario) {
-		this.nomeDoProprietario = nomeDoProprietario;
+	public void setNomeProprietario(String nomeProprietario) {
+		this.nomeProprietario = nomeProprietario;
 	}
 
-	public String getDivida() {
-		return divida;
+	public String getDividaProprietario() {
+		return dividaProprietario;
 	}
 
-	public void setDivida(String divida) {
-		this.divida = divida;
+	public void setDividaProprietario(String dividaProprietario) {
+		this.dividaProprietario = dividaProprietario;
 	}
 
-	public String getCodigoSncr() {
-		return codigoSncr;
+	public String getCodigoSncrImovel() {
+		return codigoSncrImovel;
 	}
 
-	public void setCodigoSncr(String codigoSncr) {
-		this.codigoSncr = codigoSncr;
+	public void setCodigoSncrImovel(String codigoSncrImovel) {
+		this.codigoSncrImovel = codigoSncrImovel;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getNomeImovel() {
+		return nomeImovel;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeImovel(String nomeImovel) {
+		this.nomeImovel = nomeImovel;
 	}
 
-	public String getArea() {
-		return area;
+	public String getAreaImovel() {
+		return areaImovel;
 	}
 
-	public void setArea(String area) {
-		this.area = area;
+	public void setAreaImovel(String areaImovel) {
+		this.areaImovel = areaImovel;
 	}
 
-	public String getCidade() {
-		return cidade;
+	public String getCidadeImovel() {
+		return cidadeImovel;
 	}
 
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
+	public void setCidadeImovel(String cidadeImovel) {
+		this.cidadeImovel = cidadeImovel;
 	}
 
-	public String getEstado() {
-		return estado;
+	public String getEstadoImovel() {
+		return estadoImovel;
 	}
 
-	public void setEstado(String estado) {
-		this.estado = estado;
+	public void setEstadoImovel(String estadoImovel) {
+		this.estadoImovel = estadoImovel;
 	}
 
 }
