@@ -1,18 +1,19 @@
 package br.gov.incra.geradorQuantumGis.dominio;
 
+import java.util.List;
+
 import br.gov.incra.geradorQuantumGis.infraestrutura.LeitorDeArquivo;
-import br.gov.incra.geradorQuantumGis.infraestrutura.Nomeador;
 
 public class LeitorImovelCcir extends LeitorDeArquivo<ImovelCcir> {
 
-	public LeitorImovelCcir(Nomeador nomeador) {
-		super(nomeador, 8);
+	public LeitorImovelCcir() {
+		super("ods/imoveisCertificadosPeloIncra.ods", 0);
 	}
 
 	@Override
-	protected ImovelCcir receberElemento(String... colunas) {
+	protected ImovelCcir criarRegistro(List<String> celulas) {
 		ImovelCcir imovel = new ImovelCcir();
-		imovel.setCodigoSncrImovel(colunas[1]);
+		imovel.setCodigoSncrImovel(celulas.get(1));
 		return imovel;
 	}
 

@@ -1,25 +1,26 @@
 package br.gov.incra.geradorQuantumGis.dominio;
 
+import java.util.List;
+
 import br.gov.incra.geradorQuantumGis.infraestrutura.LeitorDeArquivo;
-import br.gov.incra.geradorQuantumGis.infraestrutura.Nomeador;
 
 public class LeitorImovelSncr extends LeitorDeArquivo<ImovelSncr> {
 
-	public LeitorImovelSncr(Nomeador nomeador) {
-		super(nomeador, 8);
+	public LeitorImovelSncr() {
+		super("ods/imoveisDeDevedoresDaReceitaAcimaDeDezMilhoes.ods", 0);
 	}
 
 	@Override
-	protected ImovelSncr receberElemento(String... colunas) {
+	protected ImovelSncr criarRegistro(List<String> celulas) {
 		ImovelSncr imovel = new ImovelSncr();
-		imovel.setDocumentoProprietario(colunas[0]);
-		imovel.setNomeProprietario(colunas[1]);
-		imovel.setDividaProprietario(colunas[2]);
-		imovel.setCodigoSncrImovel(colunas[3]);
-		imovel.setNomeImovel(colunas[4]);
-		imovel.setAreaImovel(colunas[5]);
-		imovel.setCidadeImovel(colunas[6]);
-		imovel.setEstadoImovel(colunas[7]);
+		imovel.setDocumentoProprietario(celulas.get(0));
+		imovel.setNomeProprietario(celulas.get(1));
+		imovel.setDividaProprietario(celulas.get(2));
+		imovel.setCodigoSncrImovel(celulas.get(3));
+		imovel.setNomeImovel(celulas.get(4));
+		imovel.setAreaImovel(celulas.get(5));
+		imovel.setCidadeImovel(celulas.get(6));
+		imovel.setEstadoImovel(celulas.get(7));
 		return imovel;
 	}
 
