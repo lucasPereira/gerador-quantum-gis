@@ -4,9 +4,15 @@ import java.util.List;
 
 public class TransformadorSigef implements Transformador {
 
+	private Integer parte;
+
+	public TransformadorSigef(Integer indice) {
+		this.parte = indice;
+	}
+
 	@Override
 	public String obterNomePlanilha() {
-		return "ods/sigef.ods";
+		return String.format("ods/sigef%d.ods", parte);
 	}
 
 	@Override

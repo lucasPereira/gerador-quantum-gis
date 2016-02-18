@@ -15,7 +15,7 @@ public class IteradorCriadorDeEstrutura implements Iterador {
 	@Override
 	public void iterar(Imovel registro) {
 		String codigo = registro.getCodigoSncrImovel();
-		if (codigo != null && !codigo.isEmpty()) {
+		if (codigo != null && !codigo.isEmpty() && !codigo.equals("0")) {
 			registros.put(codigo, registro);
 		}
 	}
