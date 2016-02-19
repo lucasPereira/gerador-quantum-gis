@@ -6,6 +6,11 @@ public interface Transformador {
 
 	public String obterNomePlanilha();
 
+	public String obterNomeAba();
+
+	public String[] obterColunas();
+
 	public Imovel criarRegistro(List<String> celulas);
+
 
 }

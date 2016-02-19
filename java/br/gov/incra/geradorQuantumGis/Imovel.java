@@ -4,4 +4,6 @@ public interface Imovel {
 
 	public String getCodigoSncrImovel();
 
+	public String[] comoRegistro();
+
 }

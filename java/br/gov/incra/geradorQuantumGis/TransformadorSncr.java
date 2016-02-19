@@ -10,6 +10,25 @@ public class TransformadorSncr implements Transformador {
 	}
 
 	@Override
+	public String obterNomeAba() {
+		return "Devedores";
+	}
+
+	@Override
+	public String[] obterColunas() {
+		String[] colunas = new String[8];
+		colunas[0] = "CNPJ/CPF";
+		colunas[1] = "NOME DA EMPRESA OU PESSOA";
+		colunas[2] = "DÍVIDA PGFN";
+		colunas[3] = "CÓDIGO INCRA";
+		colunas[4] = "NOME DO IMÓVEL";
+		colunas[5] = "ÁREA (ha)";
+		colunas[6] = "MUNICÍPIO";
+		colunas[7] = "UF";
+		return colunas;
+	}
+
+	@Override
 	public ImovelSncr criarRegistro(List<String> celulas) {
 		ImovelSncr imovel = new ImovelSncr();
 		imovel.setDocumentoProprietario(celulas.get(0));
