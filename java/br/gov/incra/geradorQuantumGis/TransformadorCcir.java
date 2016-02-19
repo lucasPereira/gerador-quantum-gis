@@ -31,7 +31,14 @@ public class TransformadorCcir implements Transformador {
 	@Override
 	public ImovelCcir criarRegistro(List<String> celulas) {
 		ImovelCcir imovel = new ImovelCcir();
+		imovel.setIdentificador(celulas.get(0));
 		imovel.setCodigoSncrImovel(celulas.get(1));
+		imovel.setNumero(celulas.get(2));
+		imovel.setCodigoSuperintendencia(celulas.get(3));
+		imovel.setNumeroCertificacao(celulas.get(4));
+		imovel.setDataCertificacao(celulas.get(5));
+		imovel.setAreaImovel(celulas.get(6));
+		imovel.setCodigoResponsavelTecnico(celulas.get(7));
 		return imovel;
 	}
 

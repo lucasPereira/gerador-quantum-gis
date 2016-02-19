@@ -25,6 +25,15 @@ public class ImovelSncr implements Imovel {
 		return colunas;
 	}
 
+	@Override
+	public String getCodigoSncrImovel() {
+		return codigoSncrImovel;
+	}
+
+	public void setCodigoSncrImovel(String codigoSncrImovel) {
+		this.codigoSncrImovel = codigoSncrImovel.replaceAll("[.]|[-]", "");
+	}
+
 	public String getDocumentoProprietario() {
 		return documentoProprietario;
 	}
@@ -47,15 +56,6 @@ public class ImovelSncr implements Imovel {
 
 	public void setDividaProprietario(String dividaProprietario) {
 		this.dividaProprietario = dividaProprietario;
-	}
-
-	@Override
-	public String getCodigoSncrImovel() {
-		return codigoSncrImovel;
-	}
-
-	public void setCodigoSncrImovel(String codigoSncrImovel) {
-		this.codigoSncrImovel = codigoSncrImovel.replaceAll("[.]|[-]", "");
 	}
 
 	public String getNomeImovel() {
