@@ -5,11 +5,6 @@ import java.util.List;
 public class TransformadorSncr implements Transformador {
 
 	@Override
-	public String obterNomePlanilha() {
-		return "ods/sncr.ods";
-	}
-
-	@Override
 	public String obterNomeAba() {
 		return "Devedores";
 	}

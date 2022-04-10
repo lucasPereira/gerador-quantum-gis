@@ -64,6 +64,20 @@ public class ImovelSigef implements Imovel {
 		return codigoSncrImovel;
 	}
 
+	@Override
+	public String getDocumentoProprietario() {
+		if (!cpfProprietario.trim().isEmpty()) {
+			return cpfProprietario;
+		} else if (!cnpjProprietario.trim().isEmpty()) {
+			return cnpjProprietario;
+		} else if (!cpfRegistrador.trim().isEmpty()) {
+			return cpfRegistrador;
+		} else if (!cnpjRegistrador.trim().isEmpty()) {
+			return cnpjRegistrador;
+		}
+		return "";
+	}
+
 	public void setCodigoSncrImovel(String codigoSncrImovel) {
 		this.codigoSncrImovel = codigoSncrImovel;
 	}

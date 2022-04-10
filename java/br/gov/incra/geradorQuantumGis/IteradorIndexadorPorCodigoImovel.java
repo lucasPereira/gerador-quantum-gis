@@ -3,7 +3,7 @@ package br.gov.incra.geradorQuantumGis;
 import java.util.HashMap;
 import java.util.Map;
 
-public class IteradorCriadorDeEstrutura implements Iterador {
+public class IteradorIndexadorPorCodigoImovel implements Iterador {
 
 	private Map<String, Imovel> registros;
 
@@ -15,7 +15,7 @@ public class IteradorCriadorDeEstrutura implements Iterador {
 	@Override
 	public void iterar(Imovel registro) {
 		String codigo = registro.getCodigoSncrImovel();
-		if (codigo != null && !codigo.isEmpty() && !codigo.equals("0")) {
+		if (codigo != null && !codigo.isEmpty()) {
 			registros.put(codigo, registro);
 		}
 	}

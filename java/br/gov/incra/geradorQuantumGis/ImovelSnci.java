@@ -1,6 +1,6 @@
 package br.gov.incra.geradorQuantumGis;
 
-public class ImovelCcir implements Imovel {
+public class ImovelSnci implements Imovel {
 
 	private String identificador;
 	private String codigoSncrImovel;
@@ -29,9 +29,14 @@ public class ImovelCcir implements Imovel {
 	public String getCodigoSncrImovel() {
 		return codigoSncrImovel;
 	}
-
+	
 	public void setCodigoSncrImovel(String codigoSncrImovel) {
 		this.codigoSncrImovel = codigoSncrImovel;
+	}
+
+	@Override
+	public String getDocumentoProprietario() {
+		return "";
 	}
 
 	public String getIdentificador() {

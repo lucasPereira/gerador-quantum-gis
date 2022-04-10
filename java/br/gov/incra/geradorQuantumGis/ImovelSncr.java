@@ -27,19 +27,20 @@ public class ImovelSncr implements Imovel {
 
 	@Override
 	public String getCodigoSncrImovel() {
-		return codigoSncrImovel;
+		return documentoProprietario;
 	}
 
 	public void setCodigoSncrImovel(String codigoSncrImovel) {
 		this.codigoSncrImovel = codigoSncrImovel.replaceAll("[.]|[-]", "");
 	}
 
+	@Override
 	public String getDocumentoProprietario() {
 		return documentoProprietario;
 	}
 
 	public void setDocumentoProprietario(String documentoProprietario) {
-		this.documentoProprietario = documentoProprietario;
+		this.documentoProprietario = documentoProprietario.replaceAll("[.]|[-]|[/]", "");
 	}
 
 	public String getNomeProprietario() {

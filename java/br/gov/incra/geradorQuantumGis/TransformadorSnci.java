@@ -2,12 +2,7 @@ package br.gov.incra.geradorQuantumGis;
 
 import java.util.List;
 
-public class TransformadorCcir implements Transformador {
-
-	@Override
-	public String obterNomePlanilha() {
-		return "ods/ccir.ods";
-	}
+public class TransformadorSnci implements Transformador {
 
 	@Override
 	public String obterNomeAba() {
@@ -29,8 +24,8 @@ public class TransformadorCcir implements Transformador {
 	}
 
 	@Override
-	public ImovelCcir criarRegistro(List<String> celulas) {
-		ImovelCcir imovel = new ImovelCcir();
+	public ImovelSnci criarRegistro(List<String> celulas) {
+		ImovelSnci imovel = new ImovelSnci();
 		imovel.setIdentificador(celulas.get(0));
 		imovel.setCodigoSncrImovel(celulas.get(1));
 		imovel.setNumero(celulas.get(2));
